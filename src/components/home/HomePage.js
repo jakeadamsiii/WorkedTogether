@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router';
 import ReactDOM from "react-dom";
-import GoButton from '../GoButton'
+import SuggestedActors from "../SuggestedActors";
 
 class HomePage extends React.Component{
 
@@ -118,7 +118,9 @@ class HomePage extends React.Component{
                         </div>
                         ?
                     </h2>
-                    <button type="submit">Go</button>
+                    <div className="button-container"> 
+                        <button className='search-button' type="submit">Go</button>
+                    </div>
                 </form>
                 <MovieList movies={this.state.commonMovies} />
             </div>
@@ -127,22 +129,6 @@ class HomePage extends React.Component{
 }
 
 export default HomePage;
-
-const SuggestedActors = (props) => {
-    const { suggestions, onChoose } = props;
-    if(suggestions.length > 0) {
-        return (
-            <ul className="dropdown">
-            {suggestions.map(suggestion => {
-                return (
-                    <li key={suggestion.id} onClick={()=> onChoose({name: suggestion.name, id: suggestion.id})}>{suggestion.name}</li>
-                )
-            })}
-            </ul>
-        )
-    }
-    return false;
-}
 
 const MovieList = (props) => {
     const {errorMessage, movies} = props.movies;
