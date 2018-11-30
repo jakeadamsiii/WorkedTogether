@@ -1,0 +1,123 @@
+body{
+    background:linear-gradient(#654ea3, #eaafc8);
+    height: 100vh;
+}
+#app{
+    font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #4d4d4d;
+    min-width: 550px;
+    max-width: 850PX;
+    margin:0 auto;
+}
+
+a.active{
+    color: orange;
+}
+
+.jumbotron{
+    margin-top: 50px;
+}
+
+nav{
+    padding-top: 20px;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    background: #2C3E50;
+}
+
+.actor-div{
+    width: 30%;
+    display: inline-block;
+    margin: 0 10px;
+    position: relative;
+}
+
+.actor-input{
+    font-size:20px;
+    color: #654ea3;
+    width:100%;
+    padding-left: 6px;
+}
+
+.actor-div:nth-child(2) .actor-input{
+    color:#EAAFBF;
+}
+
+.dropdown{
+    position: absolute!important;
+    list-style: none;
+    font-size: 20px;
+    padding:0;
+    background: #F0F0F5;
+    width:100%;
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+    z-index: 2;
+}
+
+.dropdown li{
+    color: #654ea3;
+    padding-left: 6px;
+    cursor: pointer;
+    margin:5px 0;
+    background: #F0F0F5;
+    border-bottom: 1px solid black;
+}
+.dropdown li:first-child{
+    border-top: 1px solid black;
+    margin-top: 0;
+}
+
+.dropdown li:last-child{
+    margin-bottom: 0;
+}
+
+.actor-div:nth-child(2) .dropdown li{
+    color:#EAAFBF;
+}
+
+.button-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.search-button{
+    border: none;
+    cursor: pointer;
+    padding: 20px 50px;
+    display: inline-block;
+    margin: 15px 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    outline: none;
+    position: relative;
+    background: #2C3E50;
+    color: #fff;
+    box-shadow: 0 6px #161f28;
+    border-radius: 0 0 5px 5px;
+}
+
+.search-button:hover{
+    box-shadow: 0 4px #161f28;
+    top: 2px;
+}
+
+.movie-list{
+    list-style: none;
+    font-size: 18px;
+    padding:0;
+}
+
+.movie-list li{
+    margin: 5px 0;
+}
+
+.movie-list li.error{
+    color: red;
+    text-align: center;
+}
